@@ -640,6 +640,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'Enterprise Security & Resource Node Operations Center',
       icon: 'fa-shield-halved',
       iconColor: '#38bdf8',
+      repoUrl: 'https://github.com/RohanKhadke20/Rakshak',
       summary: 'Project RAKSHAK is a state-of-the-art security and resource node monitoring dashboard designed for mission-critical infrastructure oversight.',
       features: [
         'Real-time telemetry feeds with incident logging and threat triage',
@@ -655,6 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'Cosmic 3D Three.js & High-Frequency WebSocket Engine',
       icon: 'fa-rocket',
       iconColor: '#a855f7',
+      repoUrl: 'https://github.com/RohanKhadke20/GameInterstellar',
       summary: 'A full-stack monorepo featuring an interactive 3D WebGL space environment with live WebSocket state replication across client nodes.',
       features: [
         'Vite + React frontend with custom Three.js camera controls & particle stars',
@@ -670,6 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'Arbitrage Opportunity Tracker & Mobile-Ready Analytics',
       icon: 'fa-chart-line',
       iconColor: '#34d399',
+      repoUrl: 'https://github.com/RohanKhadke20/ArbiTrack',
       summary: 'High-speed arbitrage calculation platform providing traders with instant market discrepancy alerts across multiple asset feeds.',
       features: [
         'Real-time price spread tracking and automated profit margin calculations',
@@ -685,6 +688,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'Autonomous AI Agent Payment Orchestration Engine',
       icon: 'fa-robot',
       iconColor: '#fbbf24',
+      repoUrl: 'https://github.com/RohanKhadke20/agentpay-razorpay',
       summary: 'A secure financial transaction broker enabling AI autonomous agents to request and settle payment workflows with Razorpay API endpoints.',
       features: [
         'Cryptographically signed agent authorization headers & rate limiters',
@@ -700,6 +704,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'Deterministic 2D Newtonian Gravity Physics Sandbox',
       icon: 'fa-atom',
       iconColor: '#60a5fa',
+      repoUrl: 'https://github.com/RohanKhadke20/AetherEngine',
       summary: 'A modular computational physics engine simulating n-body gravitational attraction, momentum-conserving collisions, orbital velocity mechanics, and field diverters on HTML5 Canvas, validated with a 35-test headless suite.',
       features: [
         'Custom 2D Vector mathematics library with normalization, dot products, and vector arithmetic',
@@ -716,6 +721,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'Network & Vulnerability Assessment Security Toolkit',
       icon: 'fa-radar',
       iconColor: '#f43f5e',
+      repoUrl: 'https://github.com/RohanKhadke20/OSN_Extension',
       summary: 'An automated security analysis tool created to inspect socket configurations, verify SSL/TLS certificates, and detect anomalous payloads.',
       features: [
         'Comprehensive port scan & banner grabbing routines',
@@ -771,7 +777,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
               ${data.stack.map(s => `<span class="tech-chip" style="background: rgba(56,189,248,0.1); color: var(--accent-cyan); border-color: var(--border-glow);">${s}</span>`).join('')}
             </div>
-            <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1.25rem;">
+            <a href="${data.repoUrl || 'https://github.com/RohanKhadke20'}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1.25rem;">
               <i class="fab fa-github"></i>
               <span>View Source on GitHub</span>
             </a>
