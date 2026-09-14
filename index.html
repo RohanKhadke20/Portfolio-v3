@@ -57,6 +57,7 @@
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#credentials" class="nav-link">Credentials</a></li>
             <li><a href="#terminal" class="nav-link">CLI</a></li>
             <li><a href="#journey" class="nav-link">Journey</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -735,6 +736,43 @@
         </div>
       </section>
 
+      <!-- Certifications & Credentials Showcase Section -->
+      <section class="section" id="credentials">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge"><i class="fas fa-certificate"></i> Verified Badges & Accreditations</div>
+            <h2 class="section-title">Certifications & <span class="gradient-text">Credentials</span></h2>
+            <p class="section-description">
+              Industry-standard accreditations, cloud competencies, hackathon honors, and professional specializations.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="project-filters cert-filters">
+            <button class="filter-btn active" data-cert-filter="all">
+              <i class="fas fa-border-all"></i> All (16)
+            </button>
+            <button class="filter-btn" data-cert-filter="aws">
+              <i class="fab fa-aws" style="color: #ff9900;"></i> AWS & Cloud
+            </button>
+            <button class="filter-btn" data-cert-filter="github">
+              <i class="fab fa-github" style="color: #a855f7;"></i> GitHub & DevOps
+            </button>
+            <button class="filter-btn" data-cert-filter="hackathons">
+              <i class="fas fa-trophy" style="color: #f59e0b;"></i> Hackathons & Honors
+            </button>
+            <button class="filter-btn" data-cert-filter="dev">
+              <i class="fas fa-code" style="color: #38bdf8;"></i> Specializations
+            </button>
+          </div>
+
+          <!-- Credentials Dynamic Grid Container -->
+          <div class="cert-grid" id="cert-grid">
+            <!-- Rendered dynamically by script.js -->
+          </div>
+        </div>
+      </section>
+
       <!-- Interactive CLI Terminal Playground -->
       <section class="section terminal-teaser-section" id="terminal">
         <div class="container">
@@ -1053,6 +1091,29 @@
         <button class="modal-close-btn" id="close-proj-btn" aria-label="Close Modal">&times;</button>
         <div id="project-modal-content">
           <!-- Dynamic Content Injected via script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Certificate & Credential Viewer Modal -->
+    <div class="modal-overlay" id="certificate-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+      <div class="modal-container cert-modal-container">
+        <button class="modal-close-btn" id="close-cert-btn" aria-label="Close Modal">&times;</button>
+        <div class="cert-modal-header">
+          <div class="cert-modal-issuer" id="cert-modal-issuer">
+            <i class="fas fa-certificate"></i> Verified Credential
+          </div>
+          <h3 id="cert-modal-title" class="cert-modal-title">Certificate Title</h3>
+          <p id="cert-modal-desc" class="cert-modal-desc">Credential details and accreditation scope.</p>
+        </div>
+        <div class="cert-modal-viewer">
+          <iframe id="cert-modal-iframe" src="" title="Certificate Preview"></iframe>
+        </div>
+        <div class="cert-modal-footer">
+          <a id="cert-modal-external-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+            <i class="fas fa-arrow-up-right-from-square"></i> Open Raw PDF
+          </a>
+          <button class="btn btn-secondary" id="cert-modal-close-action" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Close</button>
         </div>
       </div>
     </div>

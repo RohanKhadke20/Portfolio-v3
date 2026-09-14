@@ -455,6 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>- <span class="term-green">about</span>: Background & Education summary</div>
       <div>- <span class="term-green">skills</span>: Core capabilities & technology stacks</div>
       <div>- <span class="term-green">projects</span>: Production monorepos & engineering works</div>
+      <div>- <span class="term-green">credentials</span>: Verified certifications, AWS badges & hackathon honors</div>
       <div>- <span class="term-green">benchmarks</span>: Quantitative performance & architecture metrics</div>
       <div>- <span class="term-green">rakshak</span>: Project RAKSHAK security architecture</div>
       <div>- <span class="term-green">astrolith</span>: 3D Three.js & WebSocket cosmic engine</div>
@@ -489,6 +490,19 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>5. <span class="term-cyan">AetherEngine</span>: Deterministic 2D Physics Sandbox & 35 Unit Tests</div>
       <div>6. <span class="term-cyan">OSN Safety Scanner</span>: Automated network & vulnerability toolkit</div>
     `,
+    credentials: `
+      <div class="term-purple">=== VERIFIED CREDENTIALS & CERTIFICATIONS (16) ===</div>
+      <div>☁️ <span class="term-cyan">AWS Cloud Practitioner</span> (Amazon Web Services)</div>
+      <div>🤖 <span class="term-cyan">Chalk Talks: Amazon Bedrock & Generative AI</span> (AWS)</div>
+      <div>🚀 <span class="term-cyan">Cloud Practitioner Cloud Quest & Cloud Scape</span> (AWS)</div>
+      <div>🐙 <span class="term-cyan">GitHub Foundations Part 1 & 2</span> (GitHub / Microsoft)</div>
+      <div>🛠️ <span class="term-cyan">GitHub Administration Basics & Product Features</span> (GitHub)</div>
+      <div>🏆 <span class="term-cyan">Smart India Hackathon (SIH)</span> Certificate of Participation</div>
+      <div>🎨 <span class="term-cyan">Adobe University Hackathon 2026</span> Certification</div>
+      <div>📜 <span class="term-cyan">Pearson JavaScript Certification</span> & Specialized Credentials</div>
+      <div class="term-yellow" style="margin-top: 0.3rem;">Type or click into the Credentials section to inspect verified PDF documents.</div>
+    `,
+    certs: () => terminalCommands.credentials,
     benchmarks: `
       <div class="term-purple">=== QUANTITATIVE BENCHMARKS & SPECS ===</div>
       <div>🛡️ <span class="term-cyan">RAKSHAK</span>: &lt; 14ms Query Latency | 100% RBAC Coverage | Docker Compose Instant Run</div>
@@ -909,6 +923,315 @@ document.addEventListener('DOMContentLoaded', () => {
         const mailtoUri = `mailto:rohankhadke20@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
         window.location.href = mailtoUri;
       }, 900);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 13. Interactive Certifications & Credentials Controller
+  // --------------------------------------------------------------------------
+  const certsDataset = [
+    {
+      id: 'aws-cloud-practitioner',
+      title: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      category: 'aws',
+      iconClass: 'fab fa-aws',
+      badgeClass: 'aws',
+      badgeText: 'AWS Accreditation',
+      description: 'Foundational cloud architectural principles, security compliance, pricing models, and core AWS compute/storage services.',
+      file: 'assets/certificates/AWS/AWS Cloud Practitioner.pdf',
+      tags: ['Cloud Fundamentals', 'AWS Core', 'Infrastructure']
+    },
+    {
+      id: 'aws-bedrock',
+      title: 'Chalk Talks: Amazon Bedrock',
+      issuer: 'AWS Training & Certification',
+      category: 'aws',
+      iconClass: 'fas fa-robot',
+      badgeClass: 'aws',
+      badgeText: 'Generative AI & LLMs',
+      description: 'Deep dive into foundation models, Amazon Bedrock API deployment, prompt engineering, and autonomous agent orchestration.',
+      file: 'assets/certificates/AWS/Chalk Talks- Amazon Bedrock.pdf',
+      tags: ['Amazon Bedrock', 'Generative AI', 'Agent Orchestration']
+    },
+    {
+      id: 'aws-cloud-quest',
+      title: 'AWS Cloud Quest: Cloud Practitioner',
+      issuer: 'AWS Training & Certification',
+      category: 'aws',
+      iconClass: 'fas fa-cloud-bolt',
+      badgeClass: 'aws',
+      badgeText: 'Hands-On Lab Challenge',
+      description: 'Hands-on architectural labs configuring VPC peering, S3 lifecycle rules, IAM policies, and resilient EC2 compute clusters.',
+      file: 'assets/certificates/AWS/Cloud Practitioner Cloud Quest.pdf',
+      tags: ['Practical Labs', 'VPC & IAM', 'Compute Architecture']
+    },
+    {
+      id: 'aws-genai-possible',
+      title: 'Introduction to Generative AI: Art of the Possible',
+      issuer: 'Amazon Web Services',
+      category: 'aws',
+      iconClass: 'fas fa-brain',
+      badgeClass: 'aws',
+      badgeText: 'AI Specialization',
+      description: 'Conceptual architecture of generative models, latent diffusion, transformer neural networks, and cloud AI governance.',
+      file: 'assets/certificates/AWS/Introduction to Generative AI-Art Of Possible.pdf',
+      tags: ['Transformers', 'Diffusion Models', 'AI Governance']
+    },
+    {
+      id: 'aws-cloud-scape',
+      title: 'AWS Cloud Scape 2026',
+      issuer: 'Amazon Web Services',
+      category: 'aws',
+      iconClass: 'fas fa-network-wired',
+      badgeClass: 'aws',
+      badgeText: 'Cloud Summit & Tech Event',
+      description: 'Participated in advanced cloud systems keynotes covering serverless microservices, distributed observability, and event-driven patterns.',
+      file: 'assets/certificates/AWS/AWS Cloud Scape Event 08-08-2026.pdf',
+      tags: ['Cloud Architecture', 'Serverless', 'Summit 2026']
+    },
+    {
+      id: 'aws-job-roles',
+      title: 'Job Roles in the Cloud',
+      issuer: 'Amazon Web Services',
+      category: 'aws',
+      iconClass: 'fas fa-briefcase',
+      badgeClass: 'aws',
+      badgeText: 'DevOps & SRE Competency',
+      description: 'Exploration of Cloud Architect, DevOps Specialist, SysOps Administrator, and Solutions Engineer responsibilities and toolchains.',
+      file: 'assets/certificates/AWS/Job Roles in the Cloud.pdf',
+      tags: ['DevOps', 'Solutions Architecture', 'SRE Fundamentals']
+    },
+    {
+      id: 'aws-accreditation',
+      title: 'AWS Technical Accreditation',
+      issuer: 'AWS Partner Network',
+      category: 'aws',
+      iconClass: 'fab fa-aws',
+      badgeClass: 'aws',
+      badgeText: 'Partner Training',
+      description: 'Enterprise cloud migration methodologies, cost optimization matrices, and multi-region failover architectures.',
+      file: 'assets/certificates/AWS/download certificate.pdf',
+      tags: ['Enterprise Cloud', 'Migration Strategy', 'Resilience']
+    },
+    {
+      id: 'github-foundations-1',
+      title: 'GitHub Foundations (Part 1 of 2)',
+      issuer: 'GitHub / Microsoft',
+      category: 'github',
+      iconClass: 'fab fa-github',
+      badgeClass: 'github',
+      badgeText: 'VCS & Collaboration',
+      description: 'Git distributed version control, branching topologies, pull request workflows, code review governance, and repository security.',
+      file: 'assets/certificates/Microsoft/GitHub Foundations Part 1 of 2.pdf',
+      tags: ['Git Topologies', 'PR Reviews', 'CI/CD Foundations']
+    },
+    {
+      id: 'github-foundations-2',
+      title: 'GitHub Foundations (Part 2 of 2)',
+      issuer: 'GitHub / Microsoft',
+      category: 'github',
+      iconClass: 'fab fa-github-alt',
+      badgeClass: 'github',
+      badgeText: 'Automation & Ecosystem',
+      description: 'GitHub Actions workflow automation, secrets management, package registry deployments, and issue board lifecycle tracking.',
+      file: 'assets/certificates/Microsoft/Github Foundations Part 2of 2.pdf',
+      tags: ['GitHub Actions', 'Secrets Vault', 'Package Registry']
+    },
+    {
+      id: 'github-admin',
+      title: 'GitHub Fundamentals: Administration & Features',
+      issuer: 'GitHub / Microsoft',
+      category: 'github',
+      iconClass: 'fas fa-gears',
+      badgeClass: 'github',
+      badgeText: 'Enterprise Governance',
+      description: 'Enterprise organization governance, role-based access control (RBAC), branch protection rules, and security compliance policies.',
+      file: 'assets/certificates/Microsoft/GitHub fundamentals - Administration basics and product features Part 1 of 2.pdf',
+      tags: ['RBAC Security', 'Branch Protection', 'Policy Compliance']
+    },
+    {
+      id: 'sih-hackathon',
+      title: 'Smart India Hackathon (SIH)',
+      issuer: 'Ministry of Education, Govt. of India',
+      category: 'hackathons',
+      iconClass: 'fas fa-trophy',
+      badgeClass: 'hackathon',
+      badgeText: 'National Hackathon',
+      description: 'Competed in India\'s premier national innovation hackathon, solving real-world technological challenges with high-performance software.',
+      file: 'assets/certificates/SIH_Certificate.pdf',
+      tags: ['National Honor', 'Govt of India', 'Rapid Prototyping']
+    },
+    {
+      id: 'adobe-hackathon',
+      title: 'Adobe University Hackathon 2026',
+      issuer: 'Adobe Systems',
+      category: 'hackathons',
+      iconClass: 'fas fa-laptop-code',
+      badgeClass: 'hackathon',
+      badgeText: 'Hackathon Award',
+      description: 'Designed and prototyped full-stack interactive digital solutions under intense 48-hour competitive engineering hackathon sprints.',
+      file: 'assets/certificates/Adobe University Hackathon 2026.pdf',
+      tags: ['Adobe Hackathon', '48hr Sprint', 'Creative UI/UX']
+    },
+    {
+      id: 'pearson-js',
+      title: 'Pearson JavaScript Specialist Certification',
+      issuer: 'Pearson Education',
+      category: 'dev',
+      iconClass: 'fab fa-js',
+      badgeClass: 'dev',
+      badgeText: 'Core Language Spec',
+      description: 'Comprehensive evaluation of ECMAScript standards, asynchronous promises/async-await, prototype chains, and DOM event mechanics.',
+      file: 'assets/certificates/Pearson Javascript Certificate.pdf',
+      tags: ['ES6+ Modern JS', 'Event Loop', 'Async Patterns']
+    },
+    {
+      id: 'specialized-cert',
+      title: 'Professional Technical Competency',
+      issuer: 'Accredited Training Authority',
+      category: 'dev',
+      iconClass: 'fas fa-award',
+      badgeClass: 'dev',
+      badgeText: 'Verified Assessment',
+      description: 'Demonstrated technical excellence and algorithmic problem solving across computing fundamentals and software implementation.',
+      file: 'assets/certificates/2503051050171_Certificate.pdf',
+      tags: ['Algorithms', 'Software Engineering', 'Accredited']
+    },
+    {
+      id: 'course-attendance-1',
+      title: 'Advanced Engineering Seminar (Sept 10)',
+      issuer: 'Technical Faculty Seminar',
+      category: 'dev',
+      iconClass: 'fas fa-user-graduate',
+      badgeClass: 'dev',
+      badgeText: 'Continuing Education',
+      description: 'Attended intensive technical lectures on computing foundations, system optimization, and contemporary software paradigms.',
+      file: 'assets/certificates/CourseAttendance20260910-20-jcferx.pdf',
+      tags: ['Engineering Seminar', 'System Design', 'Academic']
+    },
+    {
+      id: 'course-attendance-2',
+      title: 'Computing Paradigms Workshop (Sept 14)',
+      issuer: 'Technical Faculty Workshop',
+      category: 'dev',
+      iconClass: 'fas fa-graduation-cap',
+      badgeClass: 'dev',
+      badgeText: 'Technical Workshop',
+      description: 'Engaged in hands-on workshop modules analyzing modern runtime environments, distributed protocols, and application profiling.',
+      file: 'assets/certificates/CourseAttendance20260914-20-9tv5vo.pdf',
+      tags: ['Workshops', 'Performance', 'Runtime Analysis']
+    }
+  ];
+
+  const certGrid = document.getElementById('cert-grid');
+  const certFilterBtns = document.querySelectorAll('[data-cert-filter]');
+
+  function renderCertificates(filter = 'all') {
+    if (!certGrid) return;
+    certGrid.innerHTML = '';
+
+    const filtered = filter === 'all' 
+      ? certsDataset 
+      : certsDataset.filter(c => c.category === filter);
+
+    filtered.forEach(cert => {
+      const card = document.createElement('div');
+      card.className = 'cert-card';
+      card.setAttribute('data-cert-category', cert.category);
+
+      const tagsHtml = cert.tags.map(t => `<span class="cert-meta-chip">${t}</span>`).join('');
+
+      card.innerHTML = `
+        <div>
+          <div class="cert-card-top">
+            <span class="cert-issuer-badge ${cert.badgeClass}">
+              <i class="${cert.iconClass}"></i> ${cert.badgeText}
+            </span>
+            <div class="cert-icon-container">
+              <i class="${cert.iconClass}" style="color: var(--text-dim);"></i>
+            </div>
+          </div>
+          <h3 class="cert-title">${cert.title}</h3>
+          <p class="cert-desc">${cert.description}</p>
+          <div class="cert-meta-strip">${tagsHtml}</div>
+        </div>
+        <div class="cert-card-footer">
+          <button class="cert-view-btn open-cert-modal" data-cert-id="${cert.id}">
+            <i class="fas fa-eye"></i>
+            <span>Preview Document</span>
+          </button>
+          <a href="${cert.file}" target="_blank" rel="noopener noreferrer" class="cert-download-link" title="Open directly in new tab">
+            <i class="fas fa-external-link-alt"></i> Raw PDF
+          </a>
+        </div>
+      `;
+
+      certGrid.appendChild(card);
+    });
+
+    // Attach listeners to newly created preview buttons
+    document.querySelectorAll('.open-cert-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const certId = e.currentTarget.getAttribute('data-cert-id');
+        openCertificateModal(certId);
+      });
+      btn.addEventListener('mouseenter', () => playSound('hover'));
+    });
+  }
+
+  // Initial render
+  renderCertificates('all');
+
+  // Filter Switcher
+  certFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      certFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-cert-filter');
+      playSound('click');
+      renderCertificates(filter);
+    });
+  });
+
+  // Certificate Modal Controller
+  const certModal = document.getElementById('certificate-modal');
+  const closeCertBtn = document.getElementById('close-cert-btn');
+  const certModalCloseAction = document.getElementById('cert-modal-close-action');
+  const certModalTitle = document.getElementById('cert-modal-title');
+  const certModalIssuer = document.getElementById('cert-modal-issuer');
+  const certModalDesc = document.getElementById('cert-modal-desc');
+  const certModalIframe = document.getElementById('cert-modal-iframe');
+  const certModalExternalLink = document.getElementById('cert-modal-external-link');
+
+  function openCertificateModal(certId) {
+    const cert = certsDataset.find(c => c.id === certId);
+    if (!cert || !certModal) return;
+
+    certModalTitle.textContent = cert.title;
+    certModalIssuer.innerHTML = `<i class="${cert.iconClass}"></i> ${cert.issuer} &bull; ${cert.badgeText}`;
+    certModalDesc.textContent = cert.description;
+    certModalIframe.src = cert.file;
+    certModalExternalLink.href = cert.file;
+
+    certModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    playSound('success');
+  }
+
+  function closeCertificateModal() {
+    if (!certModal) return;
+    certModal.classList.remove('active');
+    certModalIframe.src = '';
+    document.body.style.overflow = '';
+    playSound('click');
+  }
+
+  if (closeCertBtn) closeCertBtn.addEventListener('click', closeCertificateModal);
+  if (certModalCloseAction) certModalCloseAction.addEventListener('click', closeCertificateModal);
+  if (certModal) {
+    certModal.addEventListener('click', (e) => {
+      if (e.target === certModal) closeCertificateModal();
     });
   }
 

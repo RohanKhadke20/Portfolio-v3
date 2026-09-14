@@ -1734,7 +1734,224 @@ textarea.form-control {
 }
 
 /* --------------------------------------------------------------------------
-   17. Responsive Breakpoints
+   16. Certifications & Credentials Grid & Card Styles
+   -------------------------------------------------------------------------- */
+.cert-filters {
+  margin-bottom: 2.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
+}
+
+.cert-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cert-issuer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+.cert-issuer-badge.aws {
+  color: #ff9900;
+  border-color: rgba(255, 153, 0, 0.3);
+  background: rgba(255, 153, 0, 0.08);
+}
+
+.cert-issuer-badge.github {
+  color: #a855f7;
+  border-color: rgba(168, 85, 247, 0.3);
+  background: rgba(168, 85, 247, 0.08);
+}
+
+.cert-issuer-badge.hackathon {
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.cert-issuer-badge.dev {
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.cert-icon-container {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+}
+
+.cert-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.cert-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.cert-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-meta-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-dim);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cert-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cert-view-btn:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.cert-download-link {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  transition: color var(--transition-fast);
+}
+
+.cert-download-link:hover {
+  color: var(--text-main);
+}
+
+/* Modal PDF Preview Container */
+.cert-modal-container {
+  max-width: 900px !important;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-modal-header {
+  margin-bottom: 1.25rem;
+  padding-right: 2rem;
+}
+
+.cert-modal-issuer {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cert-modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  margin-bottom: 0.25rem;
+}
+
+.cert-modal-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cert-modal-viewer {
+  flex-grow: 1;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.25rem;
+}
+
+.cert-modal-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cert-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   17. Responsive Breakpoints & Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .hero-grid {
