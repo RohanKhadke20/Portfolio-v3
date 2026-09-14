@@ -471,6 +471,7 @@ img {
    -------------------------------------------------------------------------- */
 .hero-section {
   min-height: 100vh;
+  min-height: 100dvh;
   padding-top: calc(var(--nav-height) + 2rem);
   display: flex;
   align-items: center;

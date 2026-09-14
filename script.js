@@ -503,8 +503,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>Stack: React, Vite, TypeScript, Tailwind, Capacitor.</div>
     `,
     aether: `
-      <div class="term-yellow">⚡ AETHERENGINE:</div>
-      <div>Native high-concurrency simulation engine written in C++20 with custom memory arenas.</div>
+      <div class="term-yellow">⚡ AETHERENGINE: ORBIT COLLAPSE:</div>
+      <div>Deterministic 2D Newtonian gravity physics sandbox built with HTML5 canvas and modular JavaScript.</div>
+      <div>Features n-body gravity, momentum conservation, zero-g shields, and 35/35 passing unit tests.</div>
     `,
     contact: `
       <div class="term-purple">=== CONTACT COORDINATES ===</div>
@@ -695,19 +696,20 @@ document.addEventListener('DOMContentLoaded', () => {
       simulatedStats: { 'Signature Security': 'SHA-256 HMAC', 'Tx Settlement': 'Instant', 'Agent Auth': 'Tokenized' }
     },
     aether: {
-      title: 'AetherEngine Compute Core',
-      tagline: 'High-Performance Computational & Physics Engine in C++',
-      icon: 'fa-gears',
+      title: 'AetherEngine: Orbit Collapse',
+      tagline: 'Deterministic 2D Newtonian Gravity Physics Sandbox',
+      icon: 'fa-atom',
       iconColor: '#60a5fa',
-      summary: 'A native low-latency engine designed to demonstrate modern C++20 paradigms, cache-friendly data structures, and memory pool allocators.',
+      summary: 'A modular computational physics engine simulating n-body gravitational attraction, momentum-conserving collisions, orbital velocity mechanics, and field diverters on HTML5 Canvas, validated with a 35-test headless suite.',
       features: [
-        'Custom memory arena allocation avoiding heap fragmentation overhead',
-        'Multi-threaded entity component calculations using modern C++ concurrency',
-        'Vectorized math operations for fast matrix transformations',
-        'Zero-allocation game loop architecture'
+        'Custom 2D Vector mathematics library with normalization, dot products, and vector arithmetic',
+        'Deterministic Newtonian gravity solver with G-constant and orbital velocity formulas',
+        'Momentum-conserving asteroid inelastic collision merging and dynamic mass swelling',
+        'Zero-G shields, inversion repulsion fields, and dynamic directional beam diverters',
+        'Headless automated test runner with 35 passing physics and orbital stability assertions'
       ],
-      stack: ['C++20', 'Memory Arenas', 'Concurrency', 'OOP', 'Data-Oriented Design'],
-      simulatedStats: { 'Memory Overhead': 'Zero Heap Allocs/Tick', 'Thread Pools': 'Optimized', 'Standard': 'C++20' }
+      stack: ['HTML5 Canvas', 'Modular JavaScript', 'Vector Math', 'Physics Engine', 'Headless Testing'],
+      simulatedStats: { 'Unit Tests': '35/35 Passed', 'Orbit Stability': '99.94%', 'Physics Clock': '60 Hz' }
     },
     osn: {
       title: 'OSN Safety Scanner',
@@ -816,6 +818,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === iterModal) iterModal.classList.remove('active');
     });
   }
+
+  // Keyboard accessibility: dismiss any active modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (projectModal && projectModal.classList.contains('active')) {
+        projectModal.classList.remove('active');
+        playSound('click');
+      }
+      if (iterModal && iterModal.classList.contains('active')) {
+        iterModal.classList.remove('active');
+        playSound('click');
+      }
+    }
+  });
 
   // --------------------------------------------------------------------------
   // 12. Contact Form & Clipboard Toast System
