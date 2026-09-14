@@ -455,10 +455,12 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>- <span class="term-green">about</span>: Background & Education summary</div>
       <div>- <span class="term-green">skills</span>: Core capabilities & technology stacks</div>
       <div>- <span class="term-green">projects</span>: Production monorepos & engineering works</div>
+      <div>- <span class="term-green">benchmarks</span>: Quantitative performance & architecture metrics</div>
       <div>- <span class="term-green">rakshak</span>: Project RAKSHAK security architecture</div>
       <div>- <span class="term-green">astrolith</span>: 3D Three.js & WebSocket cosmic engine</div>
       <div>- <span class="term-green">arbitrack</span>: Real-time arbitrage tracking specs</div>
-      <div>- <span class="term-green">aether</span>: C++ high-throughput compute engine</div>
+      <div>- <span class="term-green">agentpay</span>: Autonomous AI payment orchestration</div>
+      <div>- <span class="term-green">aether</span>: Deterministic 2D Newtonian physics sandbox</div>
       <div>- <span class="term-green">contact</span>: Direct email, LinkedIn & GitHub coordinates</div>
       <div>- <span class="term-green">quote</span>: Inspire with engineering wisdom</div>
       <div>- <span class="term-green">matrix</span>: Initiate cyber rain simulation</div>
@@ -484,8 +486,16 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>2. <span class="term-cyan">Astrolith / GameInterstellar</span>: 3D Three.js Space Engine with WebSockets</div>
       <div>3. <span class="term-cyan">ArbiTrack</span>: Arbitrage Opportunity Tracker & Mobile-Ready App</div>
       <div>4. <span class="term-cyan">AgentPay Razorpay</span>: Autonomous AI Agent Payment Protocol</div>
-      <div>5. <span class="term-cyan">AetherEngine</span>: High-Performance Computational Core in C++</div>
+      <div>5. <span class="term-cyan">AetherEngine</span>: Deterministic 2D Physics Sandbox & 35 Unit Tests</div>
       <div>6. <span class="term-cyan">OSN Safety Scanner</span>: Automated network & vulnerability toolkit</div>
+    `,
+    benchmarks: `
+      <div class="term-purple">=== QUANTITATIVE BENCHMARKS & SPECS ===</div>
+      <div>🛡️ <span class="term-cyan">RAKSHAK</span>: &lt; 14ms Query Latency | 100% RBAC Coverage | Docker Compose Instant Run</div>
+      <div>🌌 <span class="term-cyan">Astrolith</span>: 60 FPS WebGL Loop | Sub-ms WebSocket Sync | SQLite3 Persistence</div>
+      <div>📈 <span class="term-cyan">ArbiTrack</span>: 100% Offline-First PWA | 1-Click Demo Pre-Seed | Dexie IndexedDB + P2P</div>
+      <div>🤖 <span class="term-cyan">AgentPay</span>: HMAC-SHA256 Signatures | Gemini Function Calling | Prisma Audit Trail</div>
+      <div>⚛️ <span class="term-cyan">AetherEngine</span>: 35/35 Passing Headless Tests | 60 FPS Canvas Physics | Inelastic Coalescence</div>
     `,
     rakshak: `
       <div class="term-cyan">🛡️ PROJECT RAKSHAK:</div>
@@ -501,6 +511,11 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="term-green">📈 ARBITRACK:</div>
       <div>High-throughput crypto/fintech arbitrage scanner with live spread calculations.</div>
       <div>Stack: React, Vite, TypeScript, Tailwind, Capacitor.</div>
+    `,
+    agentpay: `
+      <div class="term-yellow">🤖 AGENTPAY RAZORPAY PROTOCOL:</div>
+      <div>Autonomous AI Agent payment execution and checkout protocol with Razorpay APIs.</div>
+      <div>Stack: Node.js, Express, Razorpay API, HMAC Webhooks, Prisma ORM.</div>
     `,
     aether: `
       <div class="term-yellow">⚡ AETHERENGINE: ORBIT COLLAPSE:</div>
