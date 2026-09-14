@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         this.size = Math.random() * 2 + 0.6;
         this.speedX = (Math.random() - 0.5) * 0.6;
         this.speedY = (Math.random() - 0.5) * 0.6;
-        this.color = Math.random() > 0.5 ? '#38bdf8' : '#818cf8';
+        this.color = Math.random() > 0.5 ? '#fca311' : '#e5e5e5';
         this.alpha = Math.random() * 0.5 + 0.2;
       }
 
@@ -197,6 +197,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.save();
         ctx.globalAlpha = this.alpha;
         ctx.fillStyle = this.color;
+        if (this.color === '#fca311') {
+          ctx.shadowBlur = 6;
+          ctx.shadowColor = '#fca311';
+        }
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -222,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (distance < 110) {
             ctx.save();
             ctx.globalAlpha = (1 - distance / 110) * 0.15;
-            ctx.strokeStyle = '#38bdf8';
+            ctx.strokeStyle = '#fca311';
             ctx.lineWidth = 0.75;
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);
@@ -668,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Project RAKSHAK Monorepo',
       tagline: 'Enterprise Security & Resource Node Operations Center',
       icon: 'fa-shield-halved',
-      iconColor: '#38bdf8',
+      iconColor: '#fca311',
       repoUrl: 'https://github.com/RohanKhadke20/Rakshak',
       summary: 'Project RAKSHAK is a state-of-the-art security and resource node monitoring dashboard designed for mission-critical infrastructure oversight.',
       features: [
