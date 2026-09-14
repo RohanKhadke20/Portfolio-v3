@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Rohan Khadke | Software Engineer & Full-Stack Developer</title>
+  <meta name="title" content="Rohan Khadke | Software Engineer & Full-Stack Developer">
+  <meta name="description" content="Portfolio of Rohan Khadke - B.Tech CSE Core Student at Parul University. Full-stack software developer specializing in high-performance web systems, C++, Node.js, React, and Cloud infrastructure.">
+  <meta name="keywords" content="Rohan Khadke, Software Engineer, Full Stack Developer, B.Tech CSE, Parul University, Web Development, React, Node.js, Three.js, C++, AWS Cloud">
+  <meta name="author" content="Rohan Khadke">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/RohanKhadke20">
+  <meta property="og:title" content="Rohan Khadke | Software Engineer & Full-Stack Developer">
+  <meta property="og:description" content="Explore next-generation web applications, interactive 3D graphics, cybersecurity dashboards, and distributed systems by Rohan Khadke.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Particle Canvas & Ambient Lighting -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <div class="app-container">
+
+    <!-- Top Navigation Bar -->
+    <header>
+      <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+          <a href="#home" class="logo-brand" aria-label="Rohan Khadke Home">
+            <div class="logo-icon">RK</div>
+            <span>Rohan<span class="gradient-text">.Dev</span></span>
+            <span class="logo-version">v3.0</span>
+          </a>
+
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#terminal" class="nav-link">CLI</a></li>
+            <li><a href="#journey" class="nav-link">Journey</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <!-- Audio Sound FX Toggle -->
+            <button class="icon-btn" id="audio-toggle" aria-label="Toggle UI Audio" title="Toggle UI Sound FX">
+              <i class="fas fa-volume-up" id="audio-icon"></i>
+            </button>
+            
+            <!-- Dark / Light Theme Toggle -->
+            <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+              <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section hero-section" id="home">
+        <div class="container">
+          <div class="hero-grid">
+            
+            <!-- Hero Text Content -->
+            <div class="hero-content">
+              <div class="hero-badge-container">
+                <div class="live-status">
+                  <span class="status-dot"></span>
+                  <span>Available for Engineering Opportunities</span>
+                </div>
+                <div class="tech-tag"><i class="fas fa-university"></i> Parul University &bull; CSE Core</div>
+              </div>
+
+              <h1 class="hero-title">
+                Building <span class="gradient-text">Scalable</span> Software & Immersive Interfaces.
+              </h1>
+
+              <p class="hero-subtitle">
+                Hi, I'm <strong style="color: var(--text-main);">Rohan Khadke</strong> &mdash; a Computer Science Engineer crafting high-velocity full-stack applications, native C/C++ systems, and modern cloud architectures.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+                  <span>Explore Projects</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+                  <span>Get In Touch</span>
+                  <i class="fas fa-paper-plane"></i>
+                </a>
+                <button class="btn btn-terminal" id="open-terminal-btn">
+                  <i class="fas fa-terminal"></i>
+                  <span>Launch CLI ($)</span>
+                </button>
+              </div>
+
+              <div class="social-strip">
+                <span>CONNECT:</span>
+                <div class="social-icons">
+                  <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/rohan-khadke" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <button class="icon-btn" id="copy-email-hero-btn" aria-label="Copy Email Address" title="Copy Email">
+                    <i class="fas fa-envelope"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Interactive 3D Tilt Hologram Card -->
+            <div class="hero-visual">
+              <div class="floating-badge badge-top-left">
+                <i class="fas fa-code-branch" style="color: var(--accent-cyan);"></i>
+                <span>6+ Production Repos</span>
+              </div>
+
+              <div class="profile-card-3d glass-panel" id="hero-profile-card">
+                <div class="card-shine"></div>
+                <div class="profile-media-wrapper">
+                  <img src="assets/avatar.jpg" alt="Rohan Khadke" class="profile-avatar-img" onerror="this.src='https://images.unsplash.com/photo-1534972195531-a756b1126f24?auto=format&fit=crop&w=600&q=80'">
+                  <div class="tech-ticker">
+                    <span class="tech-tag">React / Next.js</span>
+                    <span class="tech-tag">Node / Express</span>
+                    <span class="tech-tag">C / C++</span>
+                    <span class="tech-tag">AWS Cloud</span>
+                  </div>
+                </div>
+
+                <div class="profile-quick-stats">
+                  <div class="stat-box">
+                    <h4 class="counter" data-target="15">0</h4>
+                    <p>Tech Stacks</p>
+                  </div>
+                  <div class="stat-box">
+                    <h4 class="counter" data-target="100">0</h4>
+                    <p>% Dedication</p>
+                  </div>
+                  <div class="stat-box">
+                    <h4 class="counter" data-target="24">0</h4>
+                    <p>H/7 Passion</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-right">
+                <i class="fas fa-shield-alt" style="color: var(--accent-emerald);"></i>
+                <span>Full-Stack & Cloud</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Metrics Strip -->
+      <section class="metrics-strip">
+        <div class="container">
+          <div class="metrics-grid">
+            
+            <div class="metric-card glass-panel">
+              <div class="metric-icon-wrap">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <div class="metric-info">
+                <h3><span class="counter" data-target="6">0</span>+</h3>
+                <p>Major Web & System Apps</p>
+              </div>
+            </div>
+
+            <div class="metric-card glass-panel">
+              <div class="metric-icon-wrap">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <div class="metric-info">
+                <h3><span class="counter" data-target="99">0</span>.9%</h3>
+                <p>Clean Code & Memory Safety</p>
+              </div>
+            </div>
+
+            <div class="metric-card glass-panel">
+              <div class="metric-icon-wrap">
+                <i class="fas fa-cloud-upload-alt"></i>
+              </div>
+              <div class="metric-info">
+                <h3>AWS & CI</h3>
+                <p>Cloud-Native Deployment</p>
+              </div>
+            </div>
+
+            <div class="metric-card glass-panel">
+              <div class="metric-icon-wrap">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="metric-info">
+                <h3>Ultra-Fast</h3>
+                <p>Optimized UX Performance</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- About & Engineering Pillars Section -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Engineering Philosophy</div>
+            <h2 class="section-title">Driven by Curiosity, <span class="gradient-text">Engineered for Impact</span></h2>
+            <p class="section-description">
+              Bridging low-level computational performance with captivating modern web experiences.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-narrative glass-panel">
+              <h3>Hello, World!</h3>
+              <p>
+                I am a <strong>Computer Science Engineering student</strong> at <strong>Parul University (CSE Core)</strong> with a deep passion for writing clean, efficient, and architectural software.
+              </p>
+              <p>
+                From building low-level algorithmic logic in <strong>C and C++</strong> to architecting complex full-stack web platforms with <strong>React, Next.js, Node.js, WebSockets, and Three.js</strong>, I strive to create software that is performant, robust, and delightful to interact with.
+              </p>
+              <p>
+                Whether it's deploying resilient cloud infrastructure on <strong>AWS</strong>, building real-time dashboards for security monitoring, or automating AI agents, I continuously push my technical boundaries.
+              </p>
+
+              <div class="academic-badge">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                  <strong>B.Tech in Computer Science Engineering (Core)</strong>
+                  <span>Parul University &bull; 1st Year, 2nd Semester &bull; 2025&ndash;2029</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillars-grid">
+              <div class="pillar-card glass-panel">
+                <div class="pillar-icon">⚡</div>
+                <h4>High-Performance Logic</h4>
+                <p>Mastery of algorithmic paradigms, data structures, and memory layout in C/C++ to ensure optimal system speed.</p>
+              </div>
+
+              <div class="pillar-card glass-panel">
+                <div class="pillar-icon">🎨</div>
+                <h4>Modern Dynamic UI</h4>
+                <p>State-of-the-art glassmorphism, responsive CSS design systems, WebGL/Three.js 3D rendering, and smooth animations.</p>
+              </div>
+
+              <div class="pillar-card glass-panel">
+                <div class="pillar-icon">🛡️</div>
+                <h4>Security & Resilience</h4>
+                <p>Rigorous input validation, secure session management, WebSocket live channels, and relational database integrity.</p>
+              </div>
+
+              <div class="pillar-card glass-panel">
+                <div class="pillar-icon">☁️</div>
+                <h4>Cloud Infrastructure</h4>
+                <p>Deploying cloud-native solutions with AWS, containerization principles, and high-availability design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Matrix Section -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Capabilities & Stack</div>
+            <h2 class="section-title">Technical <span class="gradient-text">Mastery</span></h2>
+            <p class="section-description">
+              A comprehensive view of the languages, frameworks, and infrastructure tools I leverage every day.
+            </p>
+          </div>
+
+          <!-- Skills Filter Tabs -->
+          <div class="skills-tabs">
+            <button class="tab-btn active" data-category="all">All Disciplines</button>
+            <button class="tab-btn" data-category="languages">Languages & Systems</button>
+            <button class="tab-btn" data-category="frontend">Frontend & UI</button>
+            <button class="tab-btn" data-category="backend">Backend & Databases</button>
+            <button class="tab-btn" data-category="cloud">Cloud & DevOps</button>
+          </div>
+
+          <!-- Skills Grid -->
+          <div class="skills-grid" id="skills-container">
+
+            <!-- Skill 1 -->
+            <div class="skill-card glass-panel" data-category="languages">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #659ad2;"><i class="fas fa-code"></i></div>
+                  <div>
+                    <h4>C & C++</h4>
+                    <span class="skill-badge">Core Systems</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">90%</span>
+              </div>
+              <p class="skill-desc">Pointers, memory management, OOP principles, data structures, and native algorithm optimization.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 90%;"></div></div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="skill-card glass-panel" data-category="frontend">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #61dafb;"><i class="fab fa-react"></i></div>
+                  <div>
+                    <h4>React & Next.js</h4>
+                    <span class="skill-badge">Modern UI</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">88%</span>
+              </div>
+              <p class="skill-desc">Component hierarchies, hooks, state management (Zustand), App Router, and SSR architectures.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 88%;"></div></div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="skill-card glass-panel" data-category="frontend">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #f7df1e;"><i class="fab fa-js-square"></i></div>
+                  <div>
+                    <h4>JavaScript (ES6+) & TS</h4>
+                    <span class="skill-badge">Logic</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">92%</span>
+              </div>
+              <p class="skill-desc">Async/await, event loop, TypeScript static typing, DOM manipulation, Web Audio & WebSockets.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 92%;"></div></div>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="skill-card glass-panel" data-category="backend">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #68a063;"><i class="fab fa-node-js"></i></div>
+                  <div>
+                    <h4>Node.js & Express</h4>
+                    <span class="skill-badge">Backend APIs</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">86%</span>
+              </div>
+              <p class="skill-desc">RESTful API development, WebSocket real-time servers, middleware pipelines, and auth tokens.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 86%;"></div></div>
+            </div>
+
+            <!-- Skill 5 -->
+            <div class="skill-card glass-panel" data-category="backend">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #336791;"><i class="fas fa-database"></i></div>
+                  <div>
+                    <h4>PostgreSQL & Prisma</h4>
+                    <span class="skill-badge">Relational DB</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">84%</span>
+              </div>
+              <p class="skill-desc">Schema modeling, migrations, indexing, ACID transactions, and type-safe Prisma ORM queries.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 84%;"></div></div>
+            </div>
+
+            <!-- Skill 6 -->
+            <div class="skill-card glass-panel" data-category="frontend">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #e34f26;"><i class="fab fa-html5"></i></div>
+                  <div>
+                    <h4>HTML5 & Vanilla CSS3</h4>
+                    <span class="skill-badge">Design Systems</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">95%</span>
+              </div>
+              <p class="skill-desc">Semantic HTML, modern CSS Grid/Flexbox, custom properties, glassmorphic UI, and micro-animations.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 95%;"></div></div>
+            </div>
+
+            <!-- Skill 7 -->
+            <div class="skill-card glass-panel" data-category="cloud">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #ff9900;"><i class="fab fa-aws"></i></div>
+                  <div>
+                    <h4>AWS Cloud</h4>
+                    <span class="skill-badge">Infrastructure</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">80%</span>
+              </div>
+              <p class="skill-desc">EC2, S3 bucket storage, cloud routing, static web hosting, and resilient deployment flows.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 80%;"></div></div>
+            </div>
+
+            <!-- Skill 8 -->
+            <div class="skill-card glass-panel" data-category="frontend">
+              <div class="skill-header">
+                <div class="skill-meta">
+                  <div class="skill-brand-icon" style="color: #a855f7;"><i class="fas fa-cube"></i></div>
+                  <div>
+                    <h4>Three.js & 3D WebGL</h4>
+                    <span class="skill-badge">3D Graphics</span>
+                  </div>
+                </div>
+                <span class="skill-level" style="font-weight: 700; color: var(--accent-cyan);">82%</span>
+              </div>
+              <p class="skill-desc">Interactive 3D scenes, shaders, particle systems, procedural geometry, and camera controls.</p>
+              <div class="skill-meter-bg"><div class="skill-meter-fill" style="width: 82%;"></div></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Selected Work</div>
+            <h2 class="section-title">Engineered <span class="gradient-text">Projects</span></h2>
+            <p class="section-description">
+              Production-ready systems, full-stack monorepos, and interactive applications built from the ground up.
+            </p>
+          </div>
+
+          <!-- Project Category Filter -->
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+            <button class="filter-btn" data-filter="graphics">3D / Interactive</button>
+            <button class="filter-btn" data-filter="systems">Systems & C++</button>
+            <button class="filter-btn" data-filter="security">Security & AI</button>
+          </div>
+
+          <!-- Projects Matrix Grid -->
+          <div class="projects-grid" id="projects-container">
+
+            <!-- Project 1: Project RAKSHAK -->
+            <article class="project-card glass-panel" data-category="fullstack security">
+              <div class="project-banner">
+                <div class="banner-pattern"></div>
+                <div class="project-status-pill">Full-Stack Monorepo</div>
+                <div class="project-preview-mockup">
+                  <i class="fas fa-shield-halved mockup-icon" style="color: #38bdf8;"></i>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div>
+                  <div class="project-header">
+                    <h3>Project RAKSHAK</h3>
+                    <div class="project-tagline">Security & Resource Node Operations Center</div>
+                  </div>
+                  <p class="project-summary">
+                    An enterprise-grade infrastructure monitoring platform featuring a real-time operations dashboard, Node.js TypeScript API, PostgreSQL schema with Prisma ORM, and telemetry streaming.
+                  </p>
+                  <div class="project-tech-chips">
+                    <span class="tech-chip">Next.js</span>
+                    <span class="tech-chip">TypeScript</span>
+                    <span class="tech-chip">PostgreSQL</span>
+                    <span class="tech-chip">Prisma</span>
+                    <span class="tech-chip">Node.js</span>
+                  </div>
+                </div>
+
+                <div class="project-card-footer">
+                  <button class="details-btn open-proj-modal" data-project="rakshak">
+                    <span>Inspect Specs & Demo</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                  <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repo">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Astrolith / GameInterstellar -->
+            <article class="project-card glass-panel" data-category="fullstack graphics">
+              <div class="project-banner">
+                <div class="banner-pattern"></div>
+                <div class="project-status-pill">3D Space Engine</div>
+                <div class="project-preview-mockup">
+                  <i class="fas fa-rocket mockup-icon" style="color: #a855f7;"></i>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div>
+                  <div class="project-header">
+                    <h3>Astrolith Monorepo</h3>
+                    <div class="project-tagline">Interactive 3D Three.js & WebSocket Engine</div>
+                  </div>
+                  <p class="project-summary">
+                    A cosmic full-stack simulation engine powered by Vite + React frontend with Three.js graphics, Zustand state management, SQLite3 database, and high-frequency WebSocket sync.
+                  </p>
+                  <div class="project-tech-chips">
+                    <span class="tech-chip">Three.js</span>
+                    <span class="tech-chip">React</span>
+                    <span class="tech-chip">WebSockets</span>
+                    <span class="tech-chip">Zustand</span>
+                    <span class="tech-chip">SQLite3</span>
+                  </div>
+                </div>
+
+                <div class="project-card-footer">
+                  <button class="details-btn open-proj-modal" data-project="astrolith">
+                    <span>Inspect Specs & Demo</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                  <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repo">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: ArbiTrack -->
+            <article class="project-card glass-panel" data-category="fullstack">
+              <div class="project-banner">
+                <div class="banner-pattern"></div>
+                <div class="project-status-pill">FinTech Analytics</div>
+                <div class="project-preview-mockup">
+                  <i class="fas fa-chart-line mockup-icon" style="color: #34d399;"></i>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div>
+                  <div class="project-header">
+                    <h3>ArbiTrack</h3>
+                    <div class="project-tagline">Arbitrage Opportunity Tracker & Mobile-Ready App</div>
+                  </div>
+                  <p class="project-summary">
+                    High-throughput market arbitrage calculation engine with live price delta streams, built with React, TypeScript, Vite, and mobile compilation via Capacitor.
+                  </p>
+                  <div class="project-tech-chips">
+                    <span class="tech-chip">React</span>
+                    <span class="tech-chip">TypeScript</span>
+                    <span class="tech-chip">Vite</span>
+                    <span class="tech-chip">Capacitor</span>
+                    <span class="tech-chip">Tailwind</span>
+                  </div>
+                </div>
+
+                <div class="project-card-footer">
+                  <button class="details-btn open-proj-modal" data-project="arbitrack">
+                    <span>Inspect Specs & Demo</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                  <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repo">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: AgentPay Razorpay -->
+            <article class="project-card glass-panel" data-category="security">
+              <div class="project-banner">
+                <div class="banner-pattern"></div>
+                <div class="project-status-pill">AI Fintech Protocol</div>
+                <div class="project-preview-mockup">
+                  <i class="fas fa-robot mockup-icon" style="color: #fbbf24;"></i>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div>
+                  <div class="project-header">
+                    <h3>AgentPay Razorpay</h3>
+                    <div class="project-tagline">Autonomous AI Agent Payment Orchestration</div>
+                  </div>
+                  <p class="project-summary">
+                    A secure checkout and transaction protocol designed for autonomous agent execution with razorpay integration, webhook verifications, and cryptographic signatures.
+                  </p>
+                  <div class="project-tech-chips">
+                    <span class="tech-chip">Node.js</span>
+                    <span class="tech-chip">Razorpay API</span>
+                    <span class="tech-chip">AI Protocol</span>
+                    <span class="tech-chip">Webhooks</span>
+                  </div>
+                </div>
+
+                <div class="project-card-footer">
+                  <button class="details-btn open-proj-modal" data-project="agentpay">
+                    <span>Inspect Specs & Demo</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                  <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repo">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5: AetherEngine -->
+            <article class="project-card glass-panel" data-category="systems">
+              <div class="project-banner">
+                <div class="banner-pattern"></div>
+                <div class="project-status-pill">Native Systems</div>
+                <div class="project-preview-mockup">
+                  <i class="fas fa-gears mockup-icon" style="color: #60a5fa;"></i>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div>
+                  <div class="project-header">
+                    <h3>AetherEngine</h3>
+                    <div class="project-tagline">High-Performance Computational Core in C++</div>
+                  </div>
+                  <p class="project-summary">
+                    A low-latency simulation engine exploring multi-threaded physics calculations, custom memory pools, fast cache-friendly data structures, and optimized mathematical algorithms.
+                  </p>
+                  <div class="project-tech-chips">
+                    <span class="tech-chip">C++20</span>
+                    <span class="tech-chip">Memory Pools</span>
+                    <span class="tech-chip">OOP</span>
+                    <span class="tech-chip">Concurrency</span>
+                  </div>
+                </div>
+
+                <div class="project-card-footer">
+                  <button class="details-btn open-proj-modal" data-project="aether">
+                    <span>Inspect Specs & Demo</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                  <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repo">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 6: OSN Safety Scanner -->
+            <article class="project-card glass-panel" data-category="security systems">
+              <div class="project-banner">
+                <div class="banner-pattern"></div>
+                <div class="project-status-pill">Cybersecurity</div>
+                <div class="project-preview-mockup">
+                  <i class="fas fa-radar mockup-icon" style="color: #f43f5e;"></i>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div>
+                  <div class="project-header">
+                    <h3>OSN Safety Scanner</h3>
+                    <div class="project-tagline">Network & Vulnerability Assessment Toolkit</div>
+                  </div>
+                  <p class="project-summary">
+                    Automated security inspection utility inspecting socket interfaces, SSL certificate validations, anomalous payload detection, and generating comprehensive security audits.
+                  </p>
+                  <div class="project-tech-chips">
+                    <span class="tech-chip">Security</span>
+                    <span class="tech-chip">Sockets</span>
+                    <span class="tech-chip">Network Analysis</span>
+                    <span class="tech-chip">Auditing</span>
+                  </div>
+                </div>
+
+                <div class="project-card-footer">
+                  <button class="details-btn open-proj-modal" data-project="osn">
+                    <span>Inspect Specs & Demo</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                  <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repo">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive CLI Terminal Playground -->
+      <section class="section terminal-teaser-section" id="terminal">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Interactive Console</div>
+            <h2 class="section-title">Developer <span class="gradient-text">Terminal</span></h2>
+            <p class="section-description">
+              Prefer command line interfaces? Explore my background, projects, and contact info via interactive bash commands.
+            </p>
+          </div>
+
+          <div class="terminal-window">
+            <div class="terminal-titlebar">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">rohan@universe-station: ~ (v3.0.0-release)</div>
+              <div class="terminal-actions">Type 'help' for commands</div>
+            </div>
+
+            <div class="terminal-body" id="term-body">
+              <div class="terminal-welcome">
+                <p class="term-cyan">Welcome to Rohan Khadke's Interactive Shell v3.0 [Parul Univ / CSE Core]</p>
+                <p class="term-gray">Type <span class="term-green">'help'</span> to see available commands or click quick suggestions below.</p>
+                <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <button class="tech-tag" style="cursor:pointer;" onclick="runTerminalQuick('about')">about</button>
+                  <button class="tech-tag" style="cursor:pointer;" onclick="runTerminalQuick('skills')">skills</button>
+                  <button class="tech-tag" style="cursor:pointer;" onclick="runTerminalQuick('projects')">projects</button>
+                  <button class="tech-tag" style="cursor:pointer;" onclick="runTerminalQuick('quote')">quote</button>
+                  <button class="tech-tag" style="cursor:pointer;" onclick="runTerminalQuick('clear')">clear</button>
+                </div>
+              </div>
+
+              <div class="terminal-history" id="term-history"></div>
+
+              <div class="terminal-input-row">
+                <span class="term-prompt">rohan@portfolio:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type a command and press Enter..." aria-label="Terminal command input">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Milestones Journey -->
+      <section class="section" id="journey">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Evolution & Timeline</div>
+            <h2 class="section-title">Academic & Engineering <span class="gradient-text">Journey</span></h2>
+            <p class="section-description">
+              Tracing the progress of continuous learning, milestone builds, and expanding technical horizons.
+            </p>
+          </div>
+
+          <div class="timeline-wrap">
+            
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass-panel">
+                <span class="timeline-period">2025 &ndash; 2029 (Current)</span>
+                <h3>B.Tech Computer Science Engineering (Core)</h3>
+                <div class="timeline-sub">Parul University, Vadodara, Gujarat</div>
+                <p class="timeline-details">
+                  Engaged in fundamental computing studies including discrete structures, object-oriented paradigms in C++, memory models, relational databases, operating systems fundamentals, and web technologies.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass-panel">
+                <span class="timeline-period">2026</span>
+                <h3>Full-Stack & Distributed System Architecture</h3>
+                <div class="timeline-sub">Self-Directed & Production Systems</div>
+                <p class="timeline-details">
+                  Engineered Project RAKSHAK (security ops monorepo), Astrolith 3D Three.js WebSocket engine, and Razorpay AI protocol integrations. Deepened hands-on experience with AWS Cloud and containerization concepts.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-card glass-panel">
+                <span class="timeline-period">2025</span>
+                <h3>Web Standards, Algorithms & UI Foundations</h3>
+                <div class="timeline-sub">Portfolio v1 & v2 Milestones</div>
+                <p class="timeline-details">
+                  Focused on semantic HTML5, fluid CSS systems, responsive layouts, JavaScript event loops, and mastering core logic with procedural C.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Get In Touch</div>
+            <h2 class="section-title">Let's <span class="gradient-text">Collaborate</span></h2>
+            <p class="section-description">
+              Have an exciting engineering opportunity, internship, project collaboration, or just want to discuss tech? My inbox is always open.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            
+            <div class="contact-info-card glass-panel">
+              <h3>Connect Directly</h3>
+              <p>
+                I actively respond to inquiries regarding software engineering roles, hackathons, and innovative open-source projects.
+              </p>
+
+              <div class="contact-channel-list">
+                
+                <a href="mailto:rohankhadke20@gmail.com" class="contact-channel" id="direct-email-link">
+                  <div class="channel-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="channel-details">
+                    <h4>Email Inquiries</h4>
+                    <p>rohankhadke20@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rohan-khadke" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                  <div class="channel-icon" style="color: #0a66c2;">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                  <div class="channel-details">
+                    <h4>LinkedIn Network</h4>
+                    <p>linkedin.com/in/rohan-khadke</p>
+                  </div>
+                </a>
+
+                <a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                  <div class="channel-icon" style="color: #fff;">
+                    <i class="fab fa-github"></i>
+                  </div>
+                  <div class="channel-details">
+                    <h4>GitHub Repositories</h4>
+                    <p>github.com/RohanKhadke20</p>
+                  </div>
+                </a>
+
+                <div class="contact-channel">
+                  <div class="channel-icon" style="color: var(--accent-emerald);">
+                    <i class="fas fa-location-dot"></i>
+                  </div>
+                  <div class="channel-details">
+                    <h4>Location</h4>
+                    <p>Parul University, Gujarat, India</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Interactive Contact Form -->
+            <div class="contact-form-card glass-panel">
+              <form id="contact-form" autocomplete="off">
+                <div class="form-group">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="e.g. Alex Morgan" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Your Email Address</label>
+                  <input type="email" id="email" class="form-control" placeholder="e.g. alex@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" class="form-control" placeholder="e.g. Software Engineering Opportunity / Project Collab" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea id="message" class="form-control" placeholder="Hi Rohan, I saw your portfolio and would like to discuss..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;" id="send-msg-btn">
+                  <span>Transmit Message</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          
+          <div class="footer-brand">
+            <a href="#home" class="logo-brand">
+              <div class="logo-icon">RK</div>
+              <span>Rohan<span class="gradient-text">.Dev</span></span>
+            </a>
+            <p>
+              B.Tech Computer Science student crafting scalable software architectures, high-performance C++ systems, and intuitive web interfaces.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About & Philosophy</a></li>
+              <li><a href="#skills">Skills Matrix</a></li>
+              <li><a href="#projects">Engineered Projects</a></li>
+              <li><a href="#terminal">CLI Terminal</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Repositories & Links</h4>
+            <ul class="footer-links">
+              <li><a href="https://github.com/RohanKhadke20" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+              <li><a href="https://www.linkedin.com/in/rohan-khadke" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+              <li><a href="#" id="open-evolution-footer">Portfolio Iterations Hub</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Rohan Khadke. All rights reserved. Crafted with clean code & modern web standards.</p>
+          <p>Portfolio <span class="gradient-text" style="font-weight: 700;">Edition v3.0</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Portfolio Iterations Switcher Badge -->
+    <button class="version-badge-floating" id="open-iterations-modal" aria-label="View Portfolio Iterations">
+      <i class="fas fa-code-compare" style="color: var(--accent-cyan);"></i>
+      <span>Portfolio Iterations: <strong>v3.0 (Active)</strong></span>
+    </button>
+
+    <!-- Modal 1: Portfolio Iterations & Evolution Hub -->
+    <div class="modal-overlay" id="iterations-modal" role="dialog" aria-modal="true" aria-labelledby="iter-modal-title">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="close-iterations-btn" aria-label="Close Modal">&times;</button>
+        <div class="section-badge">Version History</div>
+        <h2 id="iter-modal-title" style="font-family: var(--font-heading); font-size: 1.75rem; margin-bottom: 0.5rem;">
+          Portfolio Evolution <span class="gradient-text">& Architecture Iterations</span>
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          A journey of growth from fundamental HTML/CSS layouts to full-stack reactive systems and WebGL graphics.
+        </p>
+
+        <div class="iterations-grid">
+          
+          <div class="iteration-card">
+            <div>
+              <span class="version-pill">Edition 1.0 (2025)</span>
+              <h4>Portfolio v1</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">The foundational static web build.</p>
+              <ul>
+                <li>Pure HTML5 structure</li>
+                <li>CSS flexbox layouts</li>
+                <li>Initial project showcase</li>
+                <li>Static contact details</li>
+              </ul>
+            </div>
+            <a href="../Portfolio v1/index.html" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 0.8rem; text-align: center;">Open v1 Archive</a>
+          </div>
+
+          <div class="iteration-card">
+            <div>
+              <span class="version-pill">Edition 2.0 (2025-2026)</span>
+              <h4>Portfolio v2</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Freelance & services showcase.</p>
+              <ul>
+                <li>Multi-section responsive UI</li>
+                <li>Service showcase cards</li>
+                <li>Filterable gallery</li>
+                <li>Skill progress indicators</li>
+              </ul>
+            </div>
+            <a href="../Portfolio v2/index.html" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 0.8rem; text-align: center;">Open v2 Archive</a>
+          </div>
+
+          <div class="iteration-card active-version">
+            <div>
+              <span class="version-pill" style="background: rgba(56, 189, 248, 0.2); color: var(--accent-cyan);">Edition 3.0 (2026 - Current)</span>
+              <h4 style="color: var(--accent-cyan);">Portfolio v3 (Next-Gen)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Ultra-modern cyber glassmorphism.</p>
+              <ul>
+                <li>Interactive 3D particle constellation</li>
+                <li>Full interactive CLI playground</li>
+                <li>Web Audio synthesizer sound FX</li>
+                <li>Filterable full-stack project matrix</li>
+                <li>Live project spec modal & dark/light modes</li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;" onclick="document.getElementById('iterations-modal').classList.remove('active')">Current Active</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Project Deep Dive & Interactive Demo Simulator -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="proj-modal-title">
+      <div class="modal-container" style="max-width: 750px;">
+        <button class="modal-close-btn" id="close-proj-btn" aria-label="Close Modal">&times;</button>
+        <div id="project-modal-content">
+          <!-- Dynamic Content Injected via script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+  </div>
+
+  <!-- Custom Logic & Interactivity Script -->
+  <script src="script.js"></script>
+</body>
+</html>
